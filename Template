@@ -1,0 +1,150 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.28-MariaDB
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema template
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ template;
+USE template;
+
+--
+-- Table structure for table `template`.`adm`
+--
+
+DROP TABLE IF EXISTS `adm`;
+CREATE TABLE `adm` (
+  `idadm` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`idadm`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `template`.`adm`
+--
+
+/*!40000 ALTER TABLE `adm` DISABLE KEYS */;
+INSERT INTO `adm` (`idadm`,`nome`,`senha`,`email`,`foto`,`cadastro`,`alteracao`,`ativo`) VALUES 
+ (1,'David','12345678','davidestudosdev@gmail.com','foto.png','2024-03-12 18:41:44','2024-03-12 18:56:39',1);
+/*!40000 ALTER TABLE `adm` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `template`.`teste1`
+--
+
+DROP TABLE IF EXISTS `teste1`;
+CREATE TABLE `teste1` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `template`.`teste1`
+--
+
+/*!40000 ALTER TABLE `teste1` DISABLE KEYS */;
+INSERT INTO `teste1` (`id`,`nome`,`cadastro`,`alteracao`,`ativo`) VALUES 
+ (2,'Ronaldinho Gaúchoooo','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (3,'Ronaldo Nazárioaaa','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (4,'Zico','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (5,'Romário','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (6,'Cafu','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (7,'Cafu','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (11,'aaa','2024-03-12 23:39:18','2024-03-12 23:39:18',1),
+ (12,'cafune','2024-03-12 23:40:46','2024-03-12 23:40:46',1),
+ (13,'Jesus Cristo','2024-03-12 23:48:15','2024-03-12 23:48:15',1),
+ (14,'Jesus','2024-03-12 23:48:46','2024-03-12 23:48:46',1);
+/*!40000 ALTER TABLE `teste1` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `template`.`teste2`
+--
+
+DROP TABLE IF EXISTS `teste2`;
+CREATE TABLE `teste2` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `template`.`teste2`
+--
+
+/*!40000 ALTER TABLE `teste2` DISABLE KEYS */;
+INSERT INTO `teste2` (`id`,`nome`,`cadastro`,`alteracao`,`ativo`) VALUES 
+ (3,'Firmino','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (4,'Marcelo','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (5,'Casemiro','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (6,'Philippe Coutinho','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (7,'Gabriel Jesus','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (11,'Jesus Cristo','2024-03-12 23:43:29','2024-03-12 23:43:29',1),
+ (12,'Jesus','2024-03-12 23:48:36','2024-03-12 23:48:36',1);
+/*!40000 ALTER TABLE `teste2` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `template`.`teste3`
+--
+
+DROP TABLE IF EXISTS `teste3`;
+CREATE TABLE `teste3` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
+  `alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `template`.`teste3`
+--
+
+/*!40000 ALTER TABLE `teste3` DISABLE KEYS */;
+INSERT INTO `teste3` (`id`,`nome`,`cadastro`,`alteracao`,`ativo`) VALUES 
+ (2,'Jairzinhooo','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (3,'Beckenbauer','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (4,'Eder Jofree','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (5,'Sócrates','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (6,'Júnior','2024-03-12 19:39:44','2024-03-12 19:39:44',1),
+ (11,'Jesus Cristo','2024-03-12 23:48:06','2024-03-12 23:48:06',1),
+ (12,'Jesus','2024-03-12 23:48:24','2024-03-12 23:48:24',1);
+/*!40000 ALTER TABLE `teste3` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
